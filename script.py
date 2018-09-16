@@ -1,7 +1,7 @@
 import csv
 import time
 
-#t0 = time.time()
+t0 = time.time()
 
 from utils import account_balance_match_percentage
 from utils import TIN_match_percentage
@@ -34,32 +34,32 @@ with open(import_dataset, 'r', encoding="utf-8") as f:
     for i in range(1, n+1):
       data['column%d' % (i,)].append(row[i-1]) #Inserts each column of data into an array
 
-#t1 = time.time()
+t1 = time.time()
 
 #Prints test results
 print ('\n' + 'Test type: Account Balance')
 for i in range(1, n+1): print (data['column%d' % (i,)][0],':', account_balance_match_percentage(data['column%d' % (i,)]), '%') 
-#t2 = time.time()
+t2 = time.time()
 
 print('\n')
 print ('Test type: TIN')
 for i in range(1, n+1): print (data['column%d' % (i,)][0],':', TIN_match_percentage(data['column%d' % (i,)]), '%')
-#t3 = time.time()
+t3 = time.time()
 
 print('\n')
 print ('Test type: First name')
 for i in range(1, n+1): print (data['column%d' % (i,)][0],':', name_match_percentage(data['column%d' % (i,)], 'first_names.txt'), '%')
-#t4 = time.time()
+t4 = time.time()
 
 print('\n')
 print ('Test type: Last name')
 for i in range(1, n+1): print (data['column%d' % (i,)][0],':', name_match_percentage(data['column%d' % (i,)], 'last_names.txt'), '%')
-#t5 = time.time()
+t5 = time.time()
 
 print('\n')
 print ('Test type: FATCA codes')
 for i in range(1, n+1): print (data['column%d' % (i,)][0],':', FATCA_codes_match_percentage(data['column%d' % (i,)]), '%')
-#t6 = time.time()    
+t6 = time.time()    
 
 '''
 print('\n' + 'Time log:')
