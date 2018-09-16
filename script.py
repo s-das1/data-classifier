@@ -61,7 +61,7 @@ print ('Test type: FATCA codes')
 for i in range(1, n+1): print (data['column%d' % (i,)][0],':', FATCA_codes_match_percentage(data['column%d' % (i,)]), '%')
 t6 = time.time()    
 
-'''
+
 print('\n' + 'Time log:')
 print ('Import:', t1-t0, 's')
 print ('Account Balance:', t2-t0, 's')
@@ -69,4 +69,3 @@ print ('TIN:', t3-t0, 's')
 print ('First name:', t4-t0, 's')
 print ('Last name:', t5-t0, 's')
 print ('FATCA:', t6-t0, 's')
-'''
