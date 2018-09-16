@@ -1,8 +1,6 @@
 import csv
 import time
 
-#test1
-#test2
 #t0 = time.time()
 
 from utils import account_balance_match_percentage
